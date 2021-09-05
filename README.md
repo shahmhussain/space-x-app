@@ -2,21 +2,27 @@
 
 ## Running the application
 
+```bash
 npm i
 npm start
+```
 
 ## Running tests
 
+```bash
 npm run test
+```
 
 ## Running test with code coverage
 
+```bash
 npm run test-coverage
+```
 
 ## Approach:
 
 - React, TypeScript, Create React App
-- Jest and React Testing Library, I tested the component behaviours and demostrate how to test the Redux store for Redux Toolkit.
+- Jest and React Testing Library, I tested the all the component behaviours and demostrate how to test the Redux store.
   I have 100% coverage on everything except store.ts and LaunchApi.ts
 
 - Accessibility, the web page can be navigated through via the tab button. I used aria tags and used HTML 5 tags as this has out of the box functionality. Ag Grid also provides hotkey support for improved accessiblity support.
