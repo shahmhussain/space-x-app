@@ -1,0 +1,19 @@
+.c-launch-table {
+  padding: 50px 100px;
+  .header {
+    $padding-left: 10px;
+    width: 50vw;
+    display: flex;
+    padding-left: 10px;
+    padding-bottom: 1em;
+
+    &__text {
+      padding-left: 1em;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-direction: column;
+    }
+  }
+}

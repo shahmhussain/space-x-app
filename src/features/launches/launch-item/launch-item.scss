@@ -1,0 +1,26 @@
+.c-launch-item {
+  padding: 50px 100px;
+  &__card {
+    width: 100%;
+    padding: 20px 50px;
+
+    &__mission-image {
+      margin-bottom: 20px;
+    }
+
+    &__info {
+      display: flex;
+      flex-wrap: wrap;
+      box-sizing: border-box;
+      flex-direction: column;
+    }
+
+    &__launch_description {
+      margin: 20px 0;
+    }
+
+    &__footer {
+      margin: 32px 0;
+    }
+  }
+}
