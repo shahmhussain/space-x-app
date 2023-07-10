@@ -1,7 +1,8 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { RootState } from "../../app/store";
-import { getLaunchDataToJSON } from "./LaunchApi";
+
 import { ILaunchInfo } from "./LaunchApi.interface";
+import { getLaunchDataToJSON } from "./api/LaunchApi";
 
 export interface LaunchState {
   launchInfo: ILaunchInfo[] | null;
