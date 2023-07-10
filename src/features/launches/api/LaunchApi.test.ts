@@ -5,7 +5,6 @@ describe("Launch API", () => {
   describe("getLaunchDataToJSON", () => {
     let response;
     it("should contain a response with flight number 106", async () => {
-      // @ts-ignore
       global.fetch = jest.fn(() =>
         Promise.resolve({
           json: () => Promise.resolve([mockLaunchData]),
@@ -18,7 +17,6 @@ describe("Launch API", () => {
     });
 
     it("should handle promise error correctly", async () => {
-      // @ts-ignore
       global.fetch = jest.fn(() => Promise.reject("error on console"));
       try {
         response = await getLaunchDataToJSON();

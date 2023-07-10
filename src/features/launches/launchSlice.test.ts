@@ -1,13 +1,13 @@
 import thunk from "redux-thunk";
 import configureMockStore from "redux-mock-store";
-import * as launchApiModule from "./LaunchApi";
+import * as launchApiModule from "./api/LaunchApi";
 import launchReducer from "./launchSlice";
 import { RootState } from "../../app/store";
-import { getLaunchDataAsync, launchesSlice } from "./launchSlice";
+import { getLaunchDataAsync } from "./launchSlice";
 const middlewares = [thunk];
 export const mockStore = configureMockStore(middlewares);
 
-jest.mock("./LaunchApi", () => ({
+jest.mock("./api/LaunchApi", () => ({
   getLaunchDataToJSON: jest.fn(),
 }));
 
