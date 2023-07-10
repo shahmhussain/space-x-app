@@ -11,22 +11,20 @@ describe("Launch API", () => {
           json: () => Promise.resolve([mockLaunchData]),
         })
       );
-      
-      response = (await getLaunchDataToJSON());
-      
-      expect(response).toEqual([mockLaunchData])
-      
+
+      response = await getLaunchDataToJSON();
+
+      expect(response).toEqual([mockLaunchData]);
     });
 
-    // it('should handle promise error correctly', async() => {
-    //   // @ts-ignore
-    //   global.fetch = jest.fn(() =>
-    //     Promise.reject('error on console')
-    //   );
-
-    //   response = (await getLaunchDataToJSON());
-      
-    //   expect(response).rejects.toEqual("hello")  
-    // })
+    it("should handle promise error correctly", async () => {
+      // @ts-ignore
+      global.fetch = jest.fn(() => Promise.reject("error on console"));
+      try {
+        response = await getLaunchDataToJSON();
+      } catch (error) {
+        expect(error).toEqual("error on console");
+      }
+    });
   });
 });
